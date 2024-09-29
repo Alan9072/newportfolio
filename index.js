@@ -99,7 +99,7 @@ gsap.from(".seconddiv p",{
 
 /////////////////////////////THIRDDIV///////////////////////////////////////////
 
-gsap.from(".headingandlogo2 h1",{
+gsap.from(".headingandlogo2 h1,#greytext1",{
   scrollTrigger: {
     trigger: ".thirddiv h1",
     start: "top 60%", // when the top of the trigger hits 80% of the viewport height
@@ -156,7 +156,7 @@ gsap.from(".c",{
 },"together")
 ////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////FOURRTH DIV///////////////////////////
-gsap.from(".headingandlogo3 h1",{
+gsap.from(".headingandlogo3 h1,#greytext2",{
   scrollTrigger: {
     trigger: ".fourthdiv h1",
     start: "top 60%", // when the top of the trigger hits 80% of the viewport height
@@ -179,7 +179,32 @@ gsap.to(".fourthdiv hr",{
   },
   width:"100%", 
 },"same")
-
+//////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////FIFTHDIV////////////////////////////////////////////
+gsap.from(".headingandlogo4 h1,#greytext3",{
+  scrollTrigger: {
+    trigger: ".fifthdiv h1",
+    start: "top 60%", // when the top of the trigger hits 80% of the viewport height
+    end: "bottom 20%",
+   // when the bottom of the trigger hits 20% of the viewport height
+    // scrub: true, // smooth scrubbing
+    // enable markers for debugging
+  },
+  opacity:0,
+  y:50
+},"same")
+gsap.to(".fifthdiv hr",{
+  scrollTrigger: {
+    trigger: ".fifthdiv h1",
+    start: "top 60%",
+    
+    // when the top of the trigger hits 80% of the viewport height
+   // when the bottom of the trigger hits 20% of the viewport height
+    // scrub: true, // smooth scrubbing
+    // enable markers for debugging
+  },
+  width:"100%", 
+},"same")
 
 
 
@@ -200,7 +225,7 @@ function updateTime() {
   // Extract hours, minutes, seconds in IST
   let hours = istTime.getHours();
   const minutes = istTime.getMinutes().toString().padStart(2, '0');
-  const seconds = istTime.getSeconds().toString().padStart(2, '0');
+  
 
   // Convert hours to 12-hour format and determine AM/PM
   let ampm = hours >= 12 ? 'PM' : 'AM';
@@ -208,10 +233,10 @@ function updateTime() {
   hours = hours ? hours : 12; // Handle midnight (0 hours)
 
   // Format the time string
-  const timeString = `${hours}:${minutes}:${seconds} ${ampm}`;
+  const timeString = `${hours}:${minutes} ${ampm}`;
 
   // Update the clock element with id 'liveTime'
-  document.getElementById('liveTime').textContent = timeString;
+  document.getElementById('liveTime').textContent = timeString + " (IST)";
 }
 
 // Update time every second
@@ -223,77 +248,33 @@ updateTime();
 
 
 
-
-
-
-
-
-const timeline = gsap.timeline({ repeat: 1, onComplete: startNextTimeline });
-
-timeline.to(".balls", {
-  y: -30,
-  duration: 0.6,
-  // repeat: -1, // Set repeat to -1 for infinite looping
-  yoyo: true,
-  stagger: {
-    amount: 0.9, // Stagger amount ball's animation by 0.2 seconds
-    // Start staggering from the beginning
-  },
-});
-
-timeline.to(".balls", {
-  y: 0,
-  duration: 0.6,
-  // repeat: -1, // Set repeat to -1 for infinite looping
-  yoyo: true,
-  stagger: {
-    amount: 0.9, // Stagger amount ball's animation by 0.2 seconds
-    // Start staggering from the beginning
-  },
-});
-
-function startNextTimeline() {
-  const timeline2 = gsap.timeline();
-
-  // Define animations for the second timeline
-  timeline2.to(".ball3", {
-    x: 0,
-    y: 0,
-    delay: 1,
-    scale: 100, // Example scale factor
-    duration: 1,
-    ease: "power2.inOut",
-  });
-
-  timeline2.to(".loadingdiv", {
-    delay: 1,
-    opacity: 0,
-    y: "-200%",
-    duration: 1,
-  });
-
-  // Add more animations to timeline2 if needed
-}
-
 /********************************************** */
 
 var tl = gsap.timeline();
 
-tl.from(".contents", {
+
+// t1.from(".navbar",{
+//   top:-10,
+//   duration: 0.5,
+//   delay: 1,
+// })
+
+tl.from(".contents,.navbar h2,.navbar", {
   y: -100,
   duration: 0.5,
   stagger:{
     from:"center",
     amount:0.2,
   },
-  delay: 9,/********************** */
+  delay: 1,/********************** */
 });
 
-tl.from(".together>.separatediv>p ,.web ,.developer", {
+
+tl.from(".together>.separatediv>p ,.web ,.developer,.separatediv", {
     y:20,
     duration: 0.5,
     opacity:0,
-    stagger:0.5
+    stagger:0.2
     
   },"same");
   tl.from("#lottie", {
