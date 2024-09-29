@@ -822,7 +822,7 @@ svg{
 }
 .sixthdiv>hr{
 
-    width: 100% ;
+    width:0% ;
     border: none;
     border-bottom:1px solid  #9a9a9a;
     
@@ -957,8 +957,12 @@ button:hover{
     align-items: center;
     backdrop-filter: blur(13px) saturate(200%);
         -webkit-backdrop-filter: blur(13px) saturate(200%);
-    background-color: rgba(255, 255, 255, 0.24);
+    background-color: rgba(255, 255, 255, 0.564);
     border: 1px solid rgba(209, 213, 219, 0.3);
+    transition: all 0.3s;
+}
+.social:hover{
+    background-color: white;
 }
 .social>img{
     height: 1cm;

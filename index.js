@@ -6,6 +6,30 @@ document.querySelector(".closebar").addEventListener("click",()=>{
 })
 
 
+const form = document.getElementById('formbox');
+
+form.addEventListener('submit', async function(event) {
+  event.preventDefault(); // Prevent default form submission
+
+  const formData = new FormData(form);
+
+  try {
+    const response = await fetch(form.action, {
+      method: 'POST',
+      body: formData,
+    });
+
+    if (response.ok) {
+      // Clear all form input fields after successful submission
+      form.reset();
+      alert('Form submitted successfully!');
+    } else {
+      alert('Form submission failed. Please try again.');
+    }
+  } catch (error) {
+    alert('An error occurred. Please try again.');
+  }
+});
 
 
 // document.addEventListener('DOMContentLoaded', () => {
@@ -209,6 +233,31 @@ gsap.to(".fifthdiv hr",{
 
 
 ///////////////////////////////////////////////////////////////////
+/////////////////////////////SIXTHDIV//////////////////////////////
+gsap.from(".headingandlogo5 h1,#greytext4",{
+  scrollTrigger: {
+    trigger: ".sixthdiv h1",
+    start: "top 60%", // when the top of the trigger hits 80% of the viewport height
+    end: "bottom 20%",
+   // when the bottom of the trigger hits 20% of the viewport height
+    // scrub: true, // smooth scrubbing
+    // enable markers for debugging
+  },
+  opacity:0,
+  y:50
+},"same")
+gsap.to(".sixthdiv hr",{
+  scrollTrigger: {
+    trigger: ".sixthdiv h1",
+    start: "top 60%",
+    
+    // when the top of the trigger hits 80% of the viewport height
+   // when the bottom of the trigger hits 20% of the viewport height
+    // scrub: true, // smooth scrubbing
+    // enable markers for debugging
+  },
+  width:"100%", 
+},"same")
 // script.js
 
 function updateTime() {

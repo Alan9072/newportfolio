@@ -482,24 +482,25 @@
           <span id="greytext4">FEEL FREE TO CONNECT ANYTIME.</span>
         </p>
         <div class="emaildiv">
-          <div class="typebox">
+          <form class="typebox" id="formbox" action="https://api.web3forms.com/submit" method="POST">
             <div class="inputs">
+              <input type="hidden" name="access_key" value="0d8d8757-0d12-43a1-8c78-47aab29683b3">
               <input type="text" placeholder="Enter your name">
-              <input type="text" placeholder="Enter your email">
+              <input type="email" placeholder="Enter your email">
 
             </div>
            
-            <textarea name="" id=""  placeholder="Write your content here.."></textarea>
-            <button>Submit</button>
-          </div>
+            <textarea name="message" required  placeholder="Write your content here.."></textarea>
+            <button type="submit">Submit</button>
+          </form>
           <div class="sideimg">
 
           </div>
           <div class="socials">
-            <div class="social"><img src="./images/bootstrap.png" alt=""></div>
-            <div class="social"><img src="./images/chatgpt--v2.png" alt=""></div>
-            <div class="social"><img src="./images/css3.png" alt=""></div>
-            <div class="social"><img src="./images/figma.png" alt=""></div>
+            <div class="social"><img src="./socials/github (1).png" alt=""></div>
+            <div class="social"><img src="./socials/instagram.png" alt=""></div>
+            <div class="social"><img src="./socials/linkedin.png" alt=""></div>
+            <div class="social"><img src="./socials/profile-avatar.png" alt=""></div>
           </div>
         </div>
         <p class="myself">Made by Myself ❤️</p>
