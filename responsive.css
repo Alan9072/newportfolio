@@ -241,7 +241,7 @@
     .sixthdiv{
         min-height: fit-content;
         padding:40px 20px;
-        padding-bottom: 70px;
+        padding-bottom: 40px;
         background-color: rgb(255, 255, 255);
         gap: 30px;
     }
@@ -252,10 +252,33 @@
     .sixthdiv>p{
         font-size: 0.5cm;
     }
+    .emaildiv{
+        flex-direction: column;
+        padding: 10px 10px;
+    }
+    .typebox{
+        width: 100%;
+    }
+    .inputs{
+        flex-direction: column;
+    }
+    .sideimg{
+        display: none;
+    }
+    .socials{
+        height: 1.7cm;
+        width: 100%;
+        justify-content: space-between;
+        flex-direction: row;
+    }
+    .social{
+        height:1.3cm;
+        width: 1.3cm;
+    }
     
 }
 
-@media (min-width:481px) and (max-width:890px) {
+@media (min-width:481px) and (max-width:950px) {
     .projectdiv1{
         display: flex;
         flex-direction: column;
@@ -297,5 +320,30 @@
     .project4{
         width:100%;
         height:8cm;
+    }
+
+
+    .emaildiv{
+        flex-direction: column;
+        padding: 10px 10px;
+    }
+    .typebox{
+        width: 100%;
+    }
+    .inputs{
+        flex-direction: column;
+    }
+    .sideimg{
+        display: none;
+    }
+    .socials{
+        height: 1.7cm;
+        width: 100%;
+        justify-content: space-between;
+        flex-direction: row;
+    }
+    .social{
+        height:1.3cm;
+        width: 1.3cm;
     }
 }
