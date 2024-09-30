@@ -1,6 +1,8 @@
 @media screen and (max-width:480px) {
    
-   
+   html{
+        scroll-behavior: auto;
+   }
     .navbar{
         padding-left: 20px;
         padding-right: 10px;

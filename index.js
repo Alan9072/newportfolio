@@ -1,11 +1,11 @@
-document.querySelector(".menubar").addEventListener("click",()=>{
+document.querySelector(".menubar").addEventListener("click", () => {
   document.querySelector(".mobilemenudiv").classList.add("left");
   document.body.style.overflow = 'hidden';
-})
-document.querySelector(".closebar").addEventListener("click",()=>{
-  document.querySelector(".mobilemenudiv").classList.remove("left");
-  document.body.style.overflow = 'auto';
-})
+});
+
+document.querySelector(".closebar").addEventListener("click", () => {
+  closeNavbar();
+});
 
 const navLinks = document.querySelectorAll(".mobilecontents");
 
@@ -17,18 +17,24 @@ navLinks.forEach(link => {
     const targetElement = document.querySelector(targetId);
 
     const targetPosition = targetElement.getBoundingClientRect().top + window.scrollY;
-    const offset = 50; // Scroll 10px above the section
+    const offset = 50; // Scroll above the section
 
-    // Scroll to the section, offset by 10px
+    // Scroll to the section with the defined offset
     window.scrollTo({
       top: targetPosition - offset,
-      behavior: 'smooth'
     });
 
-    document.querySelector(".mobilemenudiv").classList.remove("left");
-    document.body.style.overflow = 'auto';
+    // Close the navbar instantly
+    closeNavbar();
   });
 });
+
+// Function to close the navbar
+function closeNavbar() {
+  document.querySelector(".mobilemenudiv").classList.remove("left");
+  document.body.style.overflow = 'auto';
+}
+
 
 
 
