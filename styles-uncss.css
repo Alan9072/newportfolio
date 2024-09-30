@@ -429,9 +429,9 @@ svg{
 }
 .services:hover{
     background-position: right;
-    /* .insidediv{
+    .insidediv{
         transform: translateY(0%);
-    } */
+    }
 }
 
 .services::before {
