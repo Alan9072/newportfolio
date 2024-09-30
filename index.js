@@ -1,9 +1,35 @@
 document.querySelector(".menubar").addEventListener("click",()=>{
   document.querySelector(".mobilemenudiv").classList.add("left");
+  document.body.style.overflow = 'hidden';
 })
 document.querySelector(".closebar").addEventListener("click",()=>{
   document.querySelector(".mobilemenudiv").classList.remove("left");
+  document.body.style.overflow = 'auto';
 })
+
+const navLinks = document.querySelectorAll(".mobilecontents");
+
+navLinks.forEach(link => {
+  link.addEventListener('click', function(event) {
+    event.preventDefault(); // Prevent default anchor behavior
+
+    const targetId = this.getAttribute('href');
+    const targetElement = document.querySelector(targetId);
+
+    const targetPosition = targetElement.getBoundingClientRect().top + window.scrollY;
+    const offset = 50; // Scroll 10px above the section
+
+    // Scroll to the section, offset by 10px
+    window.scrollTo({
+      top: targetPosition - offset,
+      behavior: 'smooth'
+    });
+
+    document.querySelector(".mobilemenudiv").classList.remove("left");
+    document.body.style.overflow = 'auto';
+  });
+});
+
 
 
 const form = document.getElementById('formbox');

@@ -60,6 +60,7 @@
     }
 
     .mobilecontents {
+        text-decoration: none;
         color: #ffffff;
         width: 100%;
         display: flex;
