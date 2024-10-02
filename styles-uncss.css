@@ -45,7 +45,13 @@ html {
     
   }
 /*////////////////////////////////////////////////////////////////////////////////////*/  
-
+.lazy-bg {
+ /* A light background color as a placeholder */
+    background-size: cover;
+    background-position: center;
+    min-height: 300px; /* Set a reasonable height for the section */
+    transition: background-image 0.5s ease-in-out; /* Smooth transition for when the image loads */
+  }
 
 *{
     margin: 0px;
@@ -428,7 +434,7 @@ svg{
     gap: 40px;
 }
 .services:hover{
-    background-position: right;
+    
     .insidediv{
         transform: translateY(0%);
     }
@@ -448,19 +454,19 @@ svg{
   /* .services:hover::before {
     transform: scale(1.1);
   } */
-.a::before{
-    background: url(./otherimages/1026.jpg);
+.a{
+    /* background: url(./otherimages/1026.jpg); */
     background-position: center;
     background-size: cover;
     
 }
-.b::before{
-    background: url(./otherimages/5757453.jpg);
+.b{
+    /* background: url(./otherimages/5757453.jpg); */
     background-position: center;
     background-size: cover;
 }
-.c::before{
-    background: url(./otherimages/4471284.jpg);
+.c{
+    /* background: url(./otherimages/4471284.jpg); */
     background-position: center;
     background-size: cover;
 }
@@ -711,9 +717,10 @@ svg{
     border-radius: 40px;
     background: url(./projectimages/Screenshot\ 2024-07-05\ 122520.png);
     background-position: center;
-    background-size: contain;
     display: flex;
     align-items: end;
+    background-size: 105%;
+    transition: all 0.3s;
 }
 
 .project2{
@@ -724,9 +731,10 @@ svg{
     border-radius: 40px;
     background: url(./projectimages/Screenshot\ 2024-07-05\ 171525.png);
     background-position: center;
-    background-size: cover;
     display: flex;
     align-items: end;
+    background-size: 105%;
+    transition: all 0.3s;
 }
 
 .projectdiv2{
@@ -746,7 +754,8 @@ svg{
     border-radius: 40px;
     background: url(./projectimages/Screenshot\ 2024-07-05\ 124221.png);
     background-position: center;
-    background-size: contain;
+    background-size: 105%;
+    transition: all 0.3s;
     display: flex;
     align-items: end;
 }
@@ -778,9 +787,13 @@ svg{
     border-radius: 40px;
     background: url(./projectimages/Screenshot\ 2024-09-29\ 144259.png);
     background-position: center;
-    background-size: cover;
+    background-size: 105%;
     display: flex;
     align-items: end;
+    transition: all 0.3s;
+}
+.project4:hover,.project3:hover,.project2:hover,.project1:hover{
+    background-size:120%;
 }
 .skilluseddiv{
     height: 100%;

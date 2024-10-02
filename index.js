@@ -64,6 +64,38 @@ form.addEventListener('submit', async function(event) {
 });
 
 
+
+
+
+document.addEventListener("DOMContentLoaded", function () {
+  const lazyBackgrounds = document.querySelectorAll(".lazy-bg");
+
+  if ("IntersectionObserver" in window) {
+    const lazyBgObserver = new IntersectionObserver(function (entries, observer) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          const lazyBg = entry.target;
+          const bgUrl = lazyBg.getAttribute("data-bg");
+          lazyBg.style.backgroundImage = `url('${bgUrl}')`;
+          lazyBg.classList.remove("lazy-bg");
+          lazyBgObserver.unobserve(lazyBg);
+        }
+      });
+    });
+
+    lazyBackgrounds.forEach(function (lazyBg) {
+      lazyBgObserver.observe(lazyBg);
+    });
+  } else {
+    // Fallback for older browsers without IntersectionObserver support
+    lazyBackgrounds.forEach(function (lazyBg) {
+      const bgUrl = lazyBg.getAttribute("data-bg");
+      lazyBg.style.backgroundImage = `url('${bgUrl}')`;
+      lazyBg.classList.remove("lazy-bg");
+    });
+  }
+});
+
 // document.addEventListener('DOMContentLoaded', () => {
 //   const body = document.body;
 
