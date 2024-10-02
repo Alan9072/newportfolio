@@ -153,7 +153,8 @@ gsap.from(".headingandlogo1 h1",{
     // enable markers for debugging
   },
   opacity:0,
-  y:50
+  y:50,
+  stagger:0.2
 },"same")
 gsap.to(".seconddiv hr",{
   scrollTrigger: {
@@ -197,7 +198,8 @@ gsap.from(".headingandlogo2 h1,#greytext1",{
     // enable markers for debugging
   },
   opacity:0,
-  y:50
+  y:50,
+  stagger:0.2
 },"same")
 gsap.to(".thirddiv hr",{
   scrollTrigger: {
@@ -254,7 +256,8 @@ gsap.from(".headingandlogo3 h1,#greytext2",{
     // enable markers for debugging
   },
   opacity:0,
-  y:50
+  y:50,
+  stagger:0.2
 },"same")
 gsap.to(".fourthdiv hr",{
   scrollTrigger: {
@@ -279,7 +282,8 @@ gsap.from(".headingandlogo4 h1,#greytext3",{
     // enable markers for debugging
   },
   opacity:0,
-  y:50
+  y:50,
+  stagger:0.2
 },"same")
 gsap.to(".fifthdiv hr",{
   scrollTrigger: {
@@ -308,7 +312,8 @@ gsap.from(".headingandlogo5 h1,#greytext4",{
     // enable markers for debugging
   },
   opacity:0,
-  y:50
+  y:50,
+  stagger:0.2
 },"same")
 gsap.to(".sixthdiv hr",{
   scrollTrigger: {
