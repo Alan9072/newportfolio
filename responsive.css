@@ -242,6 +242,9 @@
         width: 100%;
         height: 7cm;
     }
+    .project4:hover{
+        background-size: 130%;
+    }
     .sixthdiv{
         min-height: fit-content;
         padding:40px 20px;
