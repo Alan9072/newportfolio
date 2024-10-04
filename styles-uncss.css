@@ -828,6 +828,8 @@ svg{
     font-size: 1cm;
     transform: rotate(45deg);
     transition: 0.5s;
+    text-decoration: none;
+    color: #000000;
     
 }
 .github{
