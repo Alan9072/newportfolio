@@ -331,7 +331,7 @@ svg{
 .seconddiv>p{
     font-size: 0.6cm;
     color: rgb(0, 0, 0);
-    text-transform: uppercase;
+    /* text-transform: uppercase; */
     word-spacing: 5px;
     font-weight: 700;
 
@@ -722,10 +722,10 @@ svg{
 .project1{
     padding: 20px;
     background-color: brown;
-    height: 15cm;
+    height: 12cm;
     width: 12cm;
     border-radius: 40px;
-    background: url(./projectimages/Screenshot\ 2024-07-05\ 122520.png);
+    background: url(./projectimages/Black\ and\ Beige\ Simple\ Phone\ UI\ Mockup\ Instagram\ Post\ \(2\).png);
     background-position: center;
     display: flex;
     align-items: end;
@@ -792,18 +792,18 @@ svg{
 .project4{
     padding: 20px;
     background-color: rgb(4, 255, 29);
-    height:15cm;
-    width: 25cm;
+    height:12cm;
+    width: 20cm;
     border-radius: 40px;
-    background: url(./projectimages/New\ Collection\ With\ Laptop\ Mockup\ Instagram\ Post.png);
-    background-position: center;
-    background-size: 105%;
+    background: url(./projectimages/Phone\ notification\ \(1\).png);
+    background-position:center;
+    background-size: 100%;
     display: flex;
     align-items: end;
     transition: all 0.3s;
 }
 .project4:hover,.project3:hover,.project2:hover,.project1:hover{
-    background-size:120%;
+    background-size:110%;
 }
 .skilluseddiv{
     height: 100%;
