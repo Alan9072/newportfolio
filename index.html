@@ -483,7 +483,11 @@
             <a class="social" href="#home"><img src="./socials/profile-avatar.png" alt=""></a>
           </div>
         </div>
-        <p class="myself">Made by Myself ❤️</p>
+        <div class="myself">
+  
+          <p style="margin-bottom:5px ;">Made with ❤️ by <strong>MYSELF</strong></p>
+          <p>&copy; <span id="currentYear"></span> All rights reserved.</p>
+        </div>
       </div>
     </div>
     <script>
@@ -496,13 +500,19 @@
         path: "svg.json", // Path to your JSON file
       });
     </script>
+    <script>
+      // Dynamically update the year
+      document.getElementById("currentYear").textContent = new Date().getFullYear();
+    </script>
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
       integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     ></script>
+
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
     <script src="index.js"></script>
+    
   </body>
 </html>
